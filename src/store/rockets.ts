@@ -1,5 +1,4 @@
 // state management manual pake reactive() bawaan vue
-// ga pake pinia biar simple aja, cuma dipake bareng di beberapa halaman
 
 import { reactive } from 'vue'
 import { getRockets } from '@/api/rockets'
@@ -24,10 +23,10 @@ export const rocketStore = reactive({
   },
 
   // dipanggil dari form tambah rocket
-  // (API-nya read only jadi ga bisa beneran nyimpen ke server)
+  // (API-nya read only)
   addRocket (form: NewRocketForm) {
     const newRocket: Rocket = {
-      id: 'local-' + Date.now(), // id asal2an biar unik
+      id: 'local-' + Date.now(),
       full_name: form.full_name,
       description: form.description || null,
       image_url: form.image_url || null,

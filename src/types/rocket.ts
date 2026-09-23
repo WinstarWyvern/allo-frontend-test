@@ -1,6 +1,3 @@
-// bentuk data rocket, disamain sama field dari API Launch Library 2
-// banyak yang bisa null soalnya beberapa rocket datanya emang bolong
-
 export interface Rocket {
   id: string
   full_name: string
@@ -13,7 +10,6 @@ export interface Rocket {
   } | null
 }
 
-// data yang diisi dari form "Tambah Rocket"
 export interface NewRocketForm {
   full_name: string
   description: string

@@ -1,12 +1,11 @@
 // fungsi buat manggil API Launch Library 2
-// pake versi 2.2.0 soalnya field-nya sesuai sama yang diminta di soal
 
 import type { Rocket } from '@/types/rocket'
 
 const BASE_URL = 'https://lldev.thespacedevs.com/2.2.0'
 
 export async function getRockets (): Promise<Rocket[]> {
-  // mode=detailed & limit=20 wajib ada, kalo ga datanya kepotong
+  // mode=detailed & limit=20
   const res = await fetch(
     `${BASE_URL}/config/launcher/?manufacturer__name=SpaceX&mode=detailed&limit=20`,
   )
