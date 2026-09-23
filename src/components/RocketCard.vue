@@ -51,11 +51,11 @@
   justify-content: center;
   background: rgba(255, 255, 255, 0.05);
 }
-.desc {
+.description {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   overflow: hidden;
-  opacity: 0.8;
 }
 </style>
